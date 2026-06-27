@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Записатися на тренування | FlyFitness Миколаїв</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/booking.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">FlyFitness</div>
+    <nav class="nav">
+        <a href="index.html">Головна</a>
+        <a href="services.html">Послуги</a>
+        <a href="pricing.html">Абонементи</a>
+        <a href="trainers.html">Тренери</a>
+        <a href="contact.html">Контакти</a>
+    </nav>
+    <a href="booking.html" class="btn active-btn">Записатися</a>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Онлайн-запис</h1>
+        <p>Залиште заявку, і наш адміністратор зв'яжеться з вами для підтвердження часу або підбору тренера.</p>
+    </div>
+</section>
+
+<main class="container">
+    <div class="booking-wrapper">
+        
+        <div class="booking-card">
+            <h2>Анкета клієнта</h2>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" class="booking-form">
+                
+                <input type="hidden" name="access_key" value="af3d363a-8ff3-4e5d-8b2e-3a3e325b9c94">
+                
+                <input type="hidden" name="subject" value="Нова заявка на тренування з сайту FlyFitness">
+
+                <div class="form-group">
+                    <label for="name">Ваше ім'я та прізвище:</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="Ім'я Клієнта" 
+                        placeholder="Іван Іванов" 
+                        pattern="^[A-Za-zА-Яа-яЁёІіЇїЄєҐґ'\s]{2,50}$"
+                        title="Будь ласка, введіть реальне ім'я (тільки літери, мінімум 2 символи)"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Номер телефону:</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="Телефон" 
+                        placeholder="0931234567" 
+                        pattern="^(\+38)?0\d{9}$"
+                        title="Введіть коректний номер мобільного телефону у форматі 10 цифр (наприклад: 0931234567)"
+                        required
+                    >
+                    <small style="color: #888; font-size: 12px; display: block; margin-top: 4px;">
+                        Формат: 10 цифр (наприклад, 0931234567)
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Оберіть тип абонемента:</label>
+                    <select id="service" name="Обраний Абонемент" required>
+                        <option value="" disabled selected>-- Виберіть варіант --</option>
+                        
+                        <optgroup label="Самостійні тренування (Тренажерний зал)">
+                            <option value="Тренажерний зал: 8 занять — 1050₴">8 занять (1 міс.) — 1050₴</option>
+                            <option value="Тренажерний зал: 12 занять — 1300₴">12 занять (діє 40 днів) — 1300₴</option>
+                            <option value="Тренажерний зал: 20 занять — 2000₴">20 занять (діє 3 місяці) — 2000₴</option>
+                            <option value="Тренажерний зал: 25 занять — 2450₴">25 занять (діє 12 місяців) — 2450₴</option>
+                            <option value="Тренажерний зал: Безліміт 1 міс — 1400₴">Безліміт на 1 місяць — 1400₴</option>
+                            <option value="Тренажерний зал: Безліміт 3 міс — 3000₴">Безліміт на 3 місяці — 3000₴</option>
+                            <option value="Тренажерний зал: Безліміт 6 міс — 5500₴">Безліміт на 6 місяців — 5500₴</option>
+                            <option value="Тренажерний зал: Безліміт 12 міс — 9000₴">Безліміт на 12 місяців — 9000₴</option>
+                            <option value="Тренажерний зал: Денний безліміт — 1100₴">Безлімітний денний (11:00-15:00) — 1100₴</option>
+                        </optgroup>
+
+                        <optgroup label="Бійцівський зал (Групові тренування)">
+                            <option value="Кікбоксинг (12 занять) — 1200₴">Кікбоксинг (12 тренувань / 30 днів) — 1200₴</option>
+                            <option value="Кікбоксинг Жіночий (10 занять) — 1200₴">Кікбоксинг жіночий (10 тренувань / 40 днів) — 1200₴</option>
+                            <option value="Бокс (10 занять) — 1300₴">Бокс (10 тренувань / 40 днів) — 1300₴</option>
+                            <option value="Джиу-Джитсу (10 занять) — 1300₴">Джиу-Джитсу (10 тренувань / 40 днів) — 1300₴</option>
+                        </optgroup>
+
+                        <optgroup label="Абонементи персональні з тренером">
+                            <option value="З тренером у міні-групах: 10 занять — 2600₴">10 тренувань з тренером у міні-групах — 2600₴</option>
+                            <option value="Зі старшим тренером у міні-групах: 10 занять — 3000₴">10 тренувань зі старшим тренером у міні-групах — 3000₴</option>
+                            <option value="Індивідуальні VIP: 10 занять — 4000₴">10 індивідуальних VIP тренувань — 4000₴</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Додаткова інформація (необов'язково):</label>
+                    <textarea id="message" name="Коментар клієнта" rows="3" placeholder="Уточніть зручний час або конкретного тренера (Стас, Людмила, Кирило, Віктор)..."></textarea>
+                </div>
+
+                <button type="submit" class="btn submit-btn">Надіслати заявку</button>
+            </form>
+        </div>
+
+        <div class="booking-info">
+            <h3>Важлива інформація</h3>
+            <p>Перед першим візитом ознайомтеся з правилами нашого клубу:</p>
+            <ul>
+                <li>🔹 Наявність змінного взуття та спортивної форми обов'язкова.</li>
+                <li>🔹 Якщо ви обрали Денний абонемент, час відвідування обмежений: з 11:00 до 15:00.</li>
+                <li>🔹 Персональні заняття зі Старшим тренером або VIP-сесії узгоджуються індивідуально.</li>
+            </ul>
+            <div class="support-box">
+                <p>Виникли питання? Дзвоніть напряму:</p>
+                <a href="tel:+380933641330" class="phone-link">+38 (093) 364-13-30</a>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer class="footer">
+    © 2026 FlyFitness Миколаїв. Усі права захищені.
+</footer>
+
+</body>
+</html>

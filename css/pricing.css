@@ -1,0 +1,260 @@
+.btn{
+    text-decoration: none;
+}
+
+/* ================= PRICE SECTIONS ================= */
+
+.price-section {
+    margin-bottom: 60px; /* Відступ між категоріями (Зал, Бокс, Разові) */
+}
+
+.section-title {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 30px;
+    border-left: 4px solid #00ff99; /* Зелена лінія зліва від заголовка */
+    padding-left: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/* ================= NEW PRICING GRID & CARDS ================= */
+
+.pricing-grid-full {
+    display: grid;
+    /* Автоматично підлаштовує кількість колонок залежно від екрана */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+    gap: 25px;
+}
+
+.plan-card {
+    background: #1b1b1b;
+    border: 1px solid #2a2a2a;
+    border-radius: 14px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,.25);
+    transition: .35s;
+    position: relative; /* Потрібно для позиціонування бейджів */
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    border-color: #00ff99;
+    box-shadow: 0 12px 30px rgba(0, 255, 153, 0.15);
+}
+
+.plan-card h3 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.card-meta {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.price-val {
+    font-size: 36px;
+    color: #00ff99;
+    font-weight: 800;
+}
+
+/* Модифікатор для популярної картки (Безліміт) */
+.plan-card.popular-card {
+    border: 2px solid #00ff99;
+}
+
+.mini-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00ff99;
+    color: #000;
+    font-weight: 800;
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+/* Модифікатор для VIP картки */
+.plan-card.vip-card {
+    border: 2px solid #ffcc00; /* Золотий акцент для VIP */
+}
+.plan-card.vip-card .price-val {
+    color: #ffcc00;
+}
+/* ================= SIMPLE PRICE LIST (РАЗОВІ) ================= */
+
+.pricing-list-simple {
+    background: #1b1b1b;
+    border-radius: 14px;
+    padding: 20px 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.25);
+}
+
+.simple-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #2a2a2a;
+    color: #ddd;
+    font-size: 16px;
+}
+
+.simple-row:last-child {
+    border-bottom: none; /* Прибираємо лінію у останнього елемента */
+}
+
+.simple-row strong {
+    color: #00ff99;
+    font-size: 20px;
+    font-weight: 700;
+    white-space: nowrap; /* Щоб ціна "150₴" не розривалася на два рядки */
+    padding-left: 15px;
+}
+/* ================= HERO ================= */
+
+.hero{
+    min-height:55vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+    url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438")
+    center/cover no-repeat;
+}
+
+.hero-content{
+    max-width:750px;
+}
+
+.hero h1{
+    font-size:clamp(42px,6vw,64px);
+    color:#fff;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#ddd;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+    width:min(1200px,90%);
+    margin:auto;
+    padding:80px 0;
+}
+
+/* ================= PRICING ================= */
+
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+}
+
+.plan{
+    background:#1b1b1b;
+    border-radius:18px;
+    padding:40px 30px;
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+    transition:.35s;
+}
+
+.plan:hover{
+    transform:translateY(-8px);
+}
+
+.plan h2{
+    color:#00ff99;
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.price{
+    font-size:48px;
+    color:#fff;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+.price span{
+    font-size:18px;
+    color:#aaa;
+}
+
+.plan ul{
+    list-style:none;
+    padding:0;
+    margin:30px 0;
+}
+
+.plan li{
+    color:#ddd;
+    margin-bottom:15px;
+    font-size:17px;
+}
+
+.plan .btn{
+    display:inline-block;
+    margin-top:10px;
+    text-decoration:none;
+}
+
+/* ================= POPULAR ================= */
+
+.plan.popular{
+    border:2px solid #00ff99;
+    transform:scale(1.03);
+}
+
+.plan.popular:hover{
+    transform:scale(1.06);
+}
+
+/* ================= ACTIVE LINK ================= */
+
+.nav .active{
+    color:#00ff99;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+/* Твої поточні стилі для .hero, .pricing тощо залишаються... */
+
+.section-title {
+    font-size: 22px;
+}
+
+.pricing-list-simple {
+    padding: 15px 20px;
+}
+
+.simple-row {
+    flex-direction: column; /* На мобільних назва буде зверху, ціна знизу */
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.simple-row strong {
+    padding-left: 0;
+}
+
+}
