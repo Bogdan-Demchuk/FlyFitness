@@ -1,0 +1,173 @@
+.btn {
+    text-decoration: none;
+}
+
+/* ================= HERO ================= */
+.hero {
+    min-height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: 
+        linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
+        url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438") center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 64px);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #ddd;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    width: min(1200px, 90%);
+    margin: auto;
+    padding: 60px 0;
+}
+
+/* ================= TRAINERS (ГОРИЗОНТАЛЬНИЙ СТИЛЬ) ================= */
+.trainers {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Відстань між картками */
+}
+
+.trainer {
+    display: grid;
+    grid-template-columns: 350px 1fr; /* Фото ліворуч фіксоване, текст займає весь залишок */
+    background: #1b1b1b;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: .35s;
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+/* Чергування: кожна друга картка віддзеркалюється (фото праворуч) */
+.trainer.reverse {
+    grid-template-columns: 1fr 350px;
+}
+.trainer.reverse img {
+    order: 2; /* Переміщує фото в кінець */
+}
+
+.trainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 255, 153, 0.1); /* Легке підсвічування фірмовим кольором */
+}
+
+.trainer img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+}
+
+/* Контейнер з текстом */
+.trainer-info {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.trainer-info h2 {
+    color: #00ff99;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.trainer-info h3 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Текстові блоки (Досвід, Освіта тощо) */
+.trainer-info p {
+    color: #bbb;
+    line-height: 1.6;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.trainer-info p strong {
+    color: #fff;
+}
+
+/* Список навичок та переваг */
+.trainer-info ul {
+    list-style: none;
+    padding: 20px 0 0 0;
+    margin-top: 10px;
+    border-top: 1px solid #333; /* Візуальне розділення */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Перелік пунктів у 2 стовпчики замість 1 */
+    gap: 12px 20px;
+}
+
+.trainer-info li {
+    color: #e5e5e5;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.nav .active {
+    color: #00ff99;
+}
+
+/* ================= MOBILE & TABLETS ================= */
+@media (max-width: 992px) {
+    .trainer, .trainer.reverse {
+        grid-template-columns: 1fr; /* Скидаємо до 1 стовпчика на планшетах */
+    }
+    
+    .trainer.reverse img {
+        order: 0; /* Повертаємо фото вгору */
+    }
+
+    .trainer img {
+        height: 350px;
+        min-height: auto;
+    }
+
+    .trainer-info {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 45vh;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .trainer img {
+        height: 280px;
+    }
+
+    .trainer-info h2 {
+        font-size: 26px;
+    }
+
+    .trainer-info ul {
+        grid-template-columns: 1fr; /* На мобілках пункти знову стають один під одним */
+    }
+}
