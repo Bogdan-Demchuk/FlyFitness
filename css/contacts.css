@@ -1,29 +1,23 @@
 .btn{
     text-decoration: none;
 }
-.item p a:hover {
-    color: #00ff99 !important;
-}
 /* HERO */
 
 .hero{
-
-min-height:50vh;
-
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-
-padding:40px 20px;
-
-background:
-linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
-url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438")
-center/cover;
-
+    min-height:50vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
+    background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+    url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438")
+    center/cover;
 }
-
+.item p a:hover {
+    color: #00ff99 !important;
+}
 .hero-content{
 
 max-width:700px;
