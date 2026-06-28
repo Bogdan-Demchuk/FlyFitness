@@ -1,6 +1,9 @@
 .btn{
     text-decoration: none;
 }
+.item p a:hover {
+    color: #00ff99 !important;
+}
 /* HERO */
 
 .hero{
