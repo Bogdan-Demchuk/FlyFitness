@@ -15,8 +15,16 @@
     url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438")
     center/cover;
 }
-.item p a:hover {
-    color: #00ff99 !important;
+.item p a.instagram-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.3s ease; 
+}
+
+/* Стан при наведенні курсору */
+.item p a.instagram-link:hover {
+    color: #00ff99;
 }
 .hero-content{
 
